@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: constant-app-backend
+    env: java
+    region: oregon
+    plan: free
+    runtimeVersion: 17
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-d3a1eq2li9vc7399nb00-a.oregon-postgres.render.com:5432/constant_app
+      - key: SPRING_DATASOURCE_USERNAME
+        value: constant_app_user
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: bj2MDD5uSmM1sB6pgk0yF3eEZWn8L6qV
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
