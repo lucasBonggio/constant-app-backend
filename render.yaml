@@ -16,3 +16,5 @@ services:
         value: bj2MDD5uSmM1sB6pgk0yF3eEZWn8L6qV
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: update
+      - key: JWT_SECRET
+        generateValue: true
