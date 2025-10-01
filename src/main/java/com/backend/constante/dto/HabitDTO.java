@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HabitDTO {
+    private Long id;
     private String name;
     private String description;
     private LocalDate madeSince;
