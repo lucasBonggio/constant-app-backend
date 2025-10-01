@@ -18,3 +18,5 @@ services:
         value: update
       - key: JWT_SECRET
         generateValue: true
+      - key: RENDERD_USE_NATIVE_RUNTIME
+        value: java
