@@ -1,5 +1,5 @@
 package com.backend.constante.utils;
 
-public enum Frecuency {
+public enum Frequency {
     daily, weekly
 }

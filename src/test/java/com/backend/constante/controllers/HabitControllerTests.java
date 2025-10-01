@@ -23,7 +23,7 @@ import com.backend.constante.model.Habit;
 import com.backend.constante.model.User;
 import com.backend.constante.repositories.HabitRepository;
 import com.backend.constante.repositories.UserRepository;
-import com.backend.constante.utils.Frecuency;
+import com.backend.constante.utils.Frequency;
 
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class HabitControllerTests {
@@ -94,7 +94,7 @@ public class HabitControllerTests {
 
         HabitDTO newHabit = new HabitDTO();
         newHabit.setName("Play guitar");
-        newHabit.setFrecuency(Frecuency.daily);
+        newHabit.setFrequency(Frequency.daily);
 
         ResponseEntity<HabitDTO> response = testRestTemplate.exchange(
             "/habits",

@@ -106,7 +106,7 @@ public class HabitService {
         if(habit.getName() != null)existingHabit.setName(habit.getName());
         if(habit.getDescription() != null) existingHabit.setDescription(habit.getDescription());
         if(habit.getMadeSince() != null) existingHabit.setMadeSince(habit.getMadeSince());
-        if(habit.getFrecuency() != null) existingHabit.setFrecuency(habit.getFrecuency());
+        if(habit.getFrequency() != null) existingHabit.setFrequency(habit.getFrequency());
         if(habit.getReminderTime() != null) existingHabit.setReminderTime(habit.getReminderTime());
 
         habitRepository.save(existingHabit);
@@ -128,7 +128,7 @@ public class HabitService {
 
         Habit habit = habitRepository.findByIdAndUser(idHabit, user)
             .orElseThrow(() -> new ResourceNotFoundException("Habit", idHabit));
-
+        //Unlink the user before deletion to avoid cascading errors.
         habit.setUser(null);
 
         habitRepository.delete(habit);

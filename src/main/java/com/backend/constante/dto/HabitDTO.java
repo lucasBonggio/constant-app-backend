@@ -3,7 +3,7 @@ package com.backend.constante.dto;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-import com.backend.constante.utils.Frecuency;
+import com.backend.constante.utils.Frequency;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +16,6 @@ public class HabitDTO {
     private String name;
     private String description;
     private LocalDate madeSince;
-    private Frecuency frecuency;
+    private Frequency frequency;
     private LocalTime reminderTime; 
 }

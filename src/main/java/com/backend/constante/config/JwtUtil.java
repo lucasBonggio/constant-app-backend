@@ -16,7 +16,7 @@ import io.jsonwebtoken.security.Keys;
 public class JwtUtil {
 
     private final SecretKey key;
-    private long expitarionTime = 86400000;
+    private final long expitarionTime = 86400000;
 
     public JwtUtil() {
         byte[] keyBytes = new byte[64];
