@@ -28,7 +28,7 @@ import lombok.RequiredArgsConstructor;
 public class RecordController {
     private final RecordService recordService;
 
-    @PostMapping("/{id}")
+    @PostMapping("/{habitId}")
     public ResponseEntity<RecordDTO> saveRecord(@PathVariable Long habitId,
                                                 Authentication authentication){
         String email = authentication.getName();
@@ -38,7 +38,7 @@ public class RecordController {
                             .body(newRecord);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{habitId}")
     public ResponseEntity<PagedModel<EntityModel<RecordDTO>>> findByHabitId(@PathVariable Long habitId,
                                                     @RequestParam(defaultValue="0") int page,
                                                     @RequestParam(defaultValue="10") int size,

@@ -62,7 +62,7 @@ public class HabitControllers {
         return ResponseEntity.ok("Habit has been updated correctly.");
     }
     
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{habitId}")
     public ResponseEntity<String> deleteHabit(@PathVariable Long habitId,
                                             Authentication authentication){
 
