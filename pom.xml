@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lucasbonggio</groupId>
-	<artifactId>constante</artifactId>
+	<artifactId>constant</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>constante</name>
+	<name>constant</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
